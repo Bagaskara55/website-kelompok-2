@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Web Development - Kurikulum DevPath</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .curriculum-section {
+            background: var(--background-light);
+            border-radius: var(--border-radius-default);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .curriculum-header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .curriculum-content {
+            padding: 1.5rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid var(--primary);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        .duration-badge {
+            background: var(--accent);
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 0.35rem 0.75rem;
+            border-radius: 50rem;
+            font-size: 0.85rem;
+        }
+
+        .learning-objectives {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .tools-tech {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.35rem 0.75rem;
+            border-radius: 50rem;
+            font-size: 0.85rem;
+            margin: 0.25rem;
+        }
+
+        .instructor-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-code-slash"></i>
+                DevPath
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#kursus">Kursus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#kontak">Kontak</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn btn-primary btn-sm" href="index.html" role="button">Kembali ke Beranda</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main style="margin-top: 5rem;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Back Button -->
+                    <div class="mb-4 fade-in">
+                        <a href="index.html#kursus" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Kembali ke Kursus
+                        </a>
+                    </div>
+                    
+                    <!-- Syllabus Card -->
+                    <div class="curriculum-section fade-in">
+                        <div class="curriculum-header">
+                            <span class="badge bg-warning text-dark mb-2">Bootcamp</span>
+                            <h1 class="mb-3">Full-Stack Web Development</h1>
+                            <div class="d-flex flex-wrap gap-3 align-items-center">
+                                <div><i class="bi bi-clock me-2"></i>24 Minggu</div>
+                                <div><i class="bi bi-person-workspace me-2"></i>Online & Offline</div>
+                                <div><i class="bi bi-star-fill me-2"></i>4.9/5 (250+ reviews)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="curriculum-content">
+                            <!-- Overview -->
+                            <div class="mb-5">
+                                <h2 class="section-title">
+                                    <i class="bi bi-info-circle me-2"></i>
+                                    Overview Program
+                                </h2>
+                                <p>Program bootcamp intensif untuk membangun fondasi yang kuat dalam pengembangan web modern. Kurikulum dirancang berdasarkan kebutuhan industri terkini dengan fokus pada practical skills dan project-based learning.</p>
+                                
+                                <div class="learning-objectives">
+                                    <h5 class="mb-3"><i class="bi bi-trophy me-2"></i>Learning Objectives</h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="mb-0">
+                                                <li>Membangun aplikasi web full-stack yang kompleks</li>
+                                                <li>Menguasai JavaScript modern dan TypeScript</li>
+                                                <li>Bekerja dengan database SQL dan NoSQL</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="mb-0">
+                                                <li>Mengimplementasikan autentikasi dan keamanan</li>
+                                                <li>Deploy aplikasi ke cloud platform</li>
+                                                <li>Kolaborasi dengan Git dan metodologi Agile</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Timeline Kurikulum -->
+                            <div class="mb-5">
+                                <h2 class="section-title">
+                                    <i class="bi bi-calendar3 me-2"></i>
+                                    Timeline Kurikulum
+                                </h2>
+                                
+                                <!-- Module 1 -->
+                                <div class="timeline-item">
+                                    <h4>Module 1: Front-End Fundamentals</h4>
+                                    <span class="duration-badge mb-3">6 Minggu</span>
+                                    <ul>
+                                        <li>HTML5 Semantic & Accessibility</li>
+                                        <li>CSS3, Flexbox, dan Grid Layout</li>
+                                        <li>JavaScript ES6+ & DOM Manipulation</li>
+                                        <li>Responsive Design & Mobile First</li>
+                                        <li>Version Control dengan Git</li>
+                                        <li>Project: Portfolio Website</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Module 2 -->
+                                <div class="timeline-item">
+                                    <h4>Module 2: Modern Front-End Development</h4>
+                                    <span class="duration-badge mb-3">6 Minggu</span>
+                                    <ul>
+                                        <li>React.js & Hooks</li>
+                                        <li>State Management (Redux)</li>
+                                        <li>TypeScript Fundamentals</li>
+                                        <li>Testing dengan Jest & React Testing Library</li>
+                                        <li>Performance Optimization</li>
+                                        <li>Project: E-commerce UI</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Module 3 -->
+                                <div class="timeline-item">
+                                    <h4>Module 3: Back-End Development</h4>
+                                    <span class="duration-badge mb-3">6 Minggu</span>
+                                    <ul>
+                                        <li>Node.js & Express.js</li>
+                                        <li>RESTful API Design</li>
+                                        <li>Database Design & SQL</li>
+                                        <li>MongoDB & Mongoose</li>
+                                        <li>Authentication & Authorization</li>
+                                        <li>Project: RESTful API</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Module 4 -->
+                                <div class="timeline-item">
+                                    <h4>Module 4: Advanced Topics & Final Project</h4>
+                                    <span class="duration-badge mb-3">6 Minggu</span>
+                                    <ul>
+                                        <li>Cloud Deployment (AWS/GCP)</li>
+                                        <li>Docker & Containerization</li>
+                                        <li>CI/CD Pipeline</li>
+                                        <li>Web Security Best Practices</li>
+                                        <li>WebSocket & Real-time Apps</li>
+                                        <li>Capstone Project</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Tools & Technologies -->
+                            <div class="mb-5">
+                                <h2 class="section-title">
+                                    <i class="bi bi-tools me-2"></i>
+                                    Tools & Technologies
+                                </h2>
+                                <div class="mt-3">
+                                    <span class="tools-tech">HTML5</span>
+                                    <span class="tools-tech">CSS3</span>
+                                    <span class="tools-tech">JavaScript</span>
+                                    <span class="tools-tech">TypeScript</span>
+                                    <span class="tools-tech">React</span>
+                                    <span class="tools-tech">Redux</span>
+                                    <span class="tools-tech">Node.js</span>
+                                    <span class="tools-tech">Express</span>
+                                    <span class="tools-tech">MongoDB</span>
+                                    <span class="tools-tech">PostgreSQL</span>
+                                    <span class="tools-tech">Git</span>
+                                    <span class="tools-tech">Docker</span>
+                                    <span class="tools-tech">AWS</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Projects -->
+                            <div class="mb-5">
+                                <h2 class="section-title">
+                                    <i class="bi bi-laptop me-2"></i>
+                                    Portfolio Projects
+                                </h2>
+                                
+                                <div class="row g-4 mt-3">
+                                    <div class="col-md-6">
+                                        <div class="project-card">
+                                            <h5>1. Personal Portfolio</h5>
+                                            <p class="mb-0">Website portfolio responsif dengan animasi smooth dan optimasi SEO.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="project-card">
+                                            <h5>2. E-commerce Platform</h5>
+                                            <p class="mb-0">Aplikasi e-commerce dengan cart, pembayaran, dan admin dashboard.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="project-card">
+                                            <h5>3. Real-time Chat App</h5>
+                                            <p class="mb-0">Aplikasi chat dengan WebSocket dan fitur rooms.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="project-card">
+                                            <h5>4. Capstone Project</h5>
+                                            <p class="mb-0">Project skala besar dengan implementasi full-stack.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Instructor -->
+                            <div class="instructor-card">
+                                <h2 class="section-title mb-4">
+                                    <i class="bi bi-person-check me-2"></i>
+                                    Lead Instructor
+                                </h2>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="instructor" class="rounded-circle me-4" width="100" height="100">
+                                    <div>
+                                        <h4 class="mb-1">Ahmad Faisal</h4>
+                                        <p class="text-muted mb-2">Senior Full-Stack Developer</p>
+                                        <p class="mb-0">10+ tahun pengalaman di software development. Alumnus MIT dan ex-engineer di Google & Gojek.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Section -->
+                    <div class="text-center mt-5">
+                        <h3 class="mb-4">Siap Memulai Perjalanan Coding Anda?</h3>
+                        <a href="index.html#harga" class="btn btn-primary btn-lg">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-code-slash me-2"></i>DevPath</h5>
+                    <p class="small">Platform belajar coding masa depan. Tingkatkan skill, bangun portfolio, dan raih karir impian Anda bersama komunitas developer Indonesia.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h6 class="fw-bold mb-3">Ikuti Kami</h6>
+                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="text-white fs-5"><i class="bi bi-discord"></i></a>
+                    <div class="mt-3">
+                        <span class="small">Bergabung di komunitas Discord kami!</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <h6 class="fw-bold mb-3">Kontak</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i>info@devpath.id</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i>+62 812-3456-7890</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="mb-0 small">&copy; 2025 DevPath. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
