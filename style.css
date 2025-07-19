@@ -8,9 +8,18 @@
     --text-light: #fff;
     --background-light: #fff;
     --border-radius-default: 1rem;
+    --carousel-control-color: #5a47d6;
+    --carousel-control-opacity: 0.8;
     --shadow-soft: 0 8px 32px rgba(90, 71, 214, 0.08);
     --shadow-strong: 0 8px 32px rgba(90, 71, 214, 0.15);
 }
+
+.card-img-top {
+    height: 220px; /* Atur tinggi gambar yang seragam */
+    object-fit: cover; /* Pastikan gambar menutupi area tanpa distorsi */
+    width: 100%;
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -23,7 +32,6 @@ body {
     color: var(--text-dark);
 }
 
-/* --- Global Component Styling --- */
 .btn-primary {
     background-color: var(--primary);
     border-color: var(--primary);
@@ -77,7 +85,7 @@ body {
     font-weight: 600;
 }
 
-/* --- Navbar Styling --- */
+/* --- Navbar Styling (Refined) --- */
 .navbar {
     background-color: transparent !important;
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
@@ -92,14 +100,7 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* Initial State (on hero) */
-.navbar .navbar-brand,
-.navbar .nav-link {
-    color: var(--text-light) !important;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
-    transition: color 0.3s ease;
-}
-
+/* Base style for nav links */
 .navbar .nav-link {
     font-weight: 500;
     margin: 0 0.5rem;
@@ -108,21 +109,29 @@ body {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.navbar .nav-link.active,
-.navbar .nav-link:hover {
-    color: var(--accent) !important;
+/* State on top (transparent bg) */
+.navbar:not(.scrolled) .navbar-brand,
+.navbar:not(.scrolled) .nav-link {
+    color: var(--text-light);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
-/* Scrolled State */
+.navbar:not(.scrolled) .nav-link:hover,
+.navbar:not(.scrolled) .nav-link.active {
+    color: var(--accent);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* State when scrolled (white bg) */
 .navbar.scrolled .navbar-brand,
 .navbar.scrolled .nav-link {
-    color: var(--primary) !important;
+    color: var(--primary);
     text-shadow: none;
 }
 
-.navbar.scrolled .nav-link.active,
-.navbar.scrolled .nav-link:hover {
-    color: var(--primary-dark) !important;
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
+    color: var(--primary-dark);
     background-color: rgba(90, 71, 214, 0.1);
 }
 
@@ -246,6 +255,61 @@ section:nth-of-type(even) {
     margin-left: 5px; /* Optical alignment for play icon */
 }
 
+/* --- BARU: Carousel Harmonization --- */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: var(--primary);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    opacity: 0.75;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-control-prev {
+    left: -1rem; /* Position adjusted */
+}
+
+.carousel-control-next {
+    right: -1rem; /* Position adjusted */
+}
+
+/* Make default Bootstrap icon white */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.carousel-indicators {
+    bottom: -30px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--primary);
+    opacity: 0.4;
+    border: none;
+    margin: 0 5px;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
 /* Harga */
 #harga .card.border-primary {
     transform: scale(1.05);
@@ -272,11 +336,11 @@ section:nth-of-type(even) {
         -webkit-backdrop-filter: blur(10px);
     }
     .navbar .navbar-brand, .navbar .nav-link {
-        color: var(--primary) !important;
+        color: var(--primary);
         text-shadow: none;
     }
     .navbar .nav-link.active, .navbar .nav-link:hover {
-        color: var(--primary-dark) !important;
+        color: var(--primary-dark);
         background-color: rgba(90, 71, 214, 0.1);
     }
     .navbar .nav-link {
@@ -294,5 +358,31 @@ section:nth-of-type(even) {
     section {
         padding-top: 4rem;
         padding-bottom: 4rem;
+    }
+
+    .carousel-control-prev {
+        left: 0.5rem;
+    }
+
+    .carousel-control-next {
+        right: 0.5rem;
+    }
+
+    /* Pricing Section Enhancements */
+    .pricing-card-title {
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+    }
+
+    .card ul li i.bi-check-circle-fill {
+        color: #28a745;
+    }
+
+    .card ul li i.bi-x-circle-fill {
+        color: #dc3545;
+    }
+
+    .card.border-primary {
+        border-width: 2px !important;
     }
 }
