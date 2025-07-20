@@ -386,3 +386,35 @@ section:nth-of-type(even) {
         border-width: 2px !important;
     }
 }
+
+/* Custom CSS untuk meniru style gambar */
+#plus-minus-table {
+    border: 1px solid #e0e0e0; /* Border keseluruhan */
+    border-radius: 8px; /* Sudut membulat */
+    overflow: hidden; /* Penting untuk border-radius dan shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sedikit bayangan */
+}
+
+#plus-minus-table th {
+    background-color: #f8f9fa; /* Latar belakang header lebih terang */
+    color: #495057; /* Warna teks header */
+    font-weight: 600; /* Font lebih tebal */
+    border-bottom: 2px solid #e9ecef; /* Border bawah header */
+    padding: 12px 15px; /* Padding lebih besar */
+    vertical-align: middle;
+}
+
+#plus-minus-table td {
+            background-color: #ffffff; /* Latar belakang sel data */
+            border-top: 1px solid #dee2e6; /* Border atas untuk setiap baris */
+            padding: 10px 15px; /* Padding sel data */
+            color: #343a40; /* Warna teks data */
+            vertical-align: middle;
+}
+
+#h4-table {
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
