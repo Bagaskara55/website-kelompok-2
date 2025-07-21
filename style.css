@@ -12,6 +12,34 @@
     --carousel-control-opacity: 0.8;
     --shadow-soft: 0 8px 32px rgba(90, 71, 214, 0.08);
     --shadow-strong: 0 8px 32px rgba(90, 71, 214, 0.15);
+    
+    /* Theme Variables for Light Mode */
+    --bg-color: #ffffff;
+    --text-color: #22223b;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #22223b;
+    --footer-text: #ffffff;
+    --meta-color: #64748b;
+    --section-bg: #f5f6fa;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+    --navbar-bg: rgba(15, 23, 42, 0.95);
+    --footer-bg: #020617;
+    --footer-text: #f1f5f9;
+    --meta-color: #94a3b8;
+    --section-bg: #1e293b;
+    --background-light: #0f172a;
+    --secondary: #1e293b;
+    --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .card-img-top {
@@ -28,8 +56,9 @@ html {
 
 body {
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-    background-color: var(--background-light);
-    color: var(--text-dark);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-primary {
@@ -67,11 +96,11 @@ body {
 }
 
 .card {
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius-default);
     box-shadow: var(--shadow-soft);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: var(--background-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: var(--card-bg);
 }
 
 .card:hover {
@@ -81,8 +110,10 @@ body {
 
 .card .card-header {
     background-color: transparent;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-color);
     font-weight: 600;
+    color: var(--text-color);
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 /* --- Navbar Styling (Refined) --- */
@@ -94,7 +125,7 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-color: var(--navbar-bg) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -122,27 +153,53 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* State when scrolled (white bg) */
+/* State when scrolled */
 .navbar.scrolled .navbar-brand,
 .navbar.scrolled .nav-link {
-    color: var(--primary);
+    color: var(--text-color);
     text-shadow: none;
 }
 
 .navbar.scrolled .nav-link:hover,
 .navbar.scrolled .nav-link.active {
-    color: var(--primary-dark);
+    color: var(--primary);
     background-color: rgba(90, 71, 214, 0.1);
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    background: var(--primary);
+    color: var(--text-light);
+    transform: scale(1.1);
+    border-color: var(--primary);
+}
+
+#themeToggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(90, 71, 214, 0.25);
 }
 
 /* --- Section Styling --- */
 section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+    transition: background-color 0.3s ease;
 }
 
 section:nth-of-type(even) {
-    background-color: var(--secondary);
+    background-color: var(--section-bg);
 }
 
 .section-title {
@@ -153,13 +210,15 @@ section:nth-of-type(even) {
 .section-title h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-dark);
+    color: var(--text-color);
     margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
 }
 
 .section-title p.text-muted {
     font-size: 1.15rem;
-    color: #6c757d !important;
+    color: var(--meta-color) !important;
+    transition: color 0.3s ease;
 }
 
 /* --- Specific Section Styles --- */
@@ -402,19 +461,596 @@ section:nth-of-type(even) {
     border-bottom: 2px solid #e9ecef; /* Border bawah header */
     padding: 12px 15px; /* Padding lebih besar */
     vertical-align: middle;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #plus-minus-table td {
-            background-color: #ffffff; /* Latar belakang sel data */
-            border-top: 1px solid #dee2e6; /* Border atas untuk setiap baris */
-            padding: 10px 15px; /* Padding sel data */
-            color: #343a40; /* Warna teks data */
-            vertical-align: middle;
+    background-color: #ffffff; /* Latar belakang sel data */
+    border-top: 1px solid #dee2e6; /* Border atas untuk setiap baris */
+    padding: 10px 15px; /* Padding sel data */
+    color: #343a40; /* Warna teks data */
+    vertical-align: middle;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #h4-table {
     font-weight: 700;
-    color: var(--primary-dark);
+    color: var(--text-color);
     margin-bottom: 0.75rem;
-    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .bg-dark {
+    background-color: var(--footer-bg) !important;
+}
+
+[data-theme="dark"] .text-white {
+    color: var(--footer-text) !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: var(--meta-color) !important;
+}
+
+[data-theme="dark"] #plus-minus-table th {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+[data-theme="dark"] #plus-minus-table td {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] #kursus {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kursus .section-title h2 {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kursus .section-title p {
+    color: var(--meta-color);
+}
+
+[data-theme="dark"] #kursus .card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kursus .card-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kursus .card-text {
+    color: var(--meta-color);
+}
+
+[data-theme="dark"] #kursus .btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+[data-theme="dark"] #kursus .btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+[data-theme="dark"] #kursus .carousel-control-prev,
+[data-theme="dark"] #kursus .carousel-control-next {
+    filter: invert(1);
+}
+
+[data-theme="dark"] #kursus .carousel-indicators button {
+    background-color: var(--text-color);
+}
+
+[data-theme="dark"] #kursus .carousel-indicators button.active {
+    background-color: var(--primary);
+}
+
+
+[data-theme="dark"] #harga {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #harga .section-title h2,
+[data-theme="dark"] #harga .section-title p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #harga .card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #harga .card-header {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #harga .card-title,
+[data-theme="dark"] #harga .card-text,
+[data-theme="dark"] #harga .list-unstyled li {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #harga .border-primary.shadow-lg .card-header {
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+/* Dark mode styles for testimonials section */
+[data-theme="dark"] #testimoni {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #testimoni .section-title h2,
+[data-theme="dark"] #testimoni .section-title p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #testimoni .card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #testimoni .card-text,
+[data-theme="dark"] #testimoni strong,
+[data-theme="dark"] #testimoni .text-muted {
+    color: var(--text-color) !important;
+}
+
+/* Dark mode styles for blog section */
+[data-theme="dark"] #blog {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #blog .section-title h2,
+[data-theme="dark"] #blog .section-title p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #blog .card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #blog .card-title,
+[data-theme="dark"] #blog .card-text {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #blog .carousel-control-prev-icon,
+[data-theme="dark"] #blog .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+[data-theme="dark"] #blog .carousel-indicators button {
+    background-color: var(--text-color);
+}
+
+/* Dark mode styles for event webinar section */
+[data-theme="dark"] #event-webinar {
+    background-color: var(--secondary-bg) !important;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #event-webinar .section-title h2,
+[data-theme="dark"] #event-webinar .section-title p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #event-webinar .card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #event-webinar .card-title,
+[data-theme="dark"] #event-webinar .card-body,
+[data-theme="dark"] #event-webinar .list-unstyled li {
+    color: var(--text-color);
+}
+
+/* Dark mode styles for tips karir section */
+[data-theme="dark"] #tips-karir {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #tips-karir .section-title h2,
+[data-theme="dark"] #tips-karir .section-title p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #tips-karir .card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #tips-karir .card-title,
+[data-theme="dark"] #tips-karir .card-body,
+[data-theme="dark"] #tips-karir .card-body ul li {
+    color: var(--text-color);
+}
+
+/* Dark mode styles for contact section */
+[data-theme="dark"] #kontak {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kontak .section-title h2,
+[data-theme="dark"] #kontak .section-title p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kontak .card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kontak .form-label,
+[data-theme="dark"] #kontak .form-control,
+[data-theme="dark"] #kontak h5,
+[data-theme="dark"] #kontak h6,
+[data-theme="dark"] #kontak .list-unstyled li,
+[data-theme="dark"] #kontak p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kontak .form-control {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #kontak .form-control:focus {
+    background-color: var(--card-bg);
+    border-color: var(--primary);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+}
+
+[data-theme="dark"] #kontak .bg-light {
+    background-color: var(--secondary-bg) !important;
+}
+
+/* Dark mode styles for FAQ section */
+[data-theme="dark"] #faq {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #faq .section-title h2,
+[data-theme="dark"] #faq .section-title p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #faq .accordion-item {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] #faq .accordion-button {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] #faq .accordion-button:not(.collapsed) {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    box-shadow: none;
+}
+
+[data-theme="dark"] #faq .accordion-body {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] #partners {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #partners h6 {
+    color: var(--text-color);
+}
+
+/* Dark mode styles for tentang section */
+[data-theme="dark"] #tentang {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #tentang .section-title h2,
+[data-theme="dark"] #tentang .section-title p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #tentang p,
+[data-theme="dark"] #tentang ul li {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #tentang .table {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] #tentang .table th,
+[data-theme="dark"] #tentang .table td {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] #tentang .table thead th {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* Dark mode for form placeholders */
+[data-theme="dark"] .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .form-control::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .form-control::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .form-control:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+[data-theme="dark"] section[style*="background: linear-gradient(135deg, #e0e7ff 0%, #fff 100%)"] {
+    background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--bg-color) 100%) !important;
+}
+
+[data-theme="dark"] .card[style*="background: #fff"] {
+    background: var(--card-bg) !important;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] section.py-5[style*="background: linear-gradient"] {
+    background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--bg-color) 100%) !important;
+}
+
+[data-theme="dark"] section.py-5 .card {
+    background: var(--card-bg) !important;
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+
+[data-theme="dark"] .card h5,
+[data-theme="dark"] .card p,
+[data-theme="dark"] .card .card-title,
+[data-theme="dark"] .card .card-text {
+    color: var(--text-color);
+}
+
+
+[data-theme="dark"] section.bg-light {
+    background-color: var(--secondary-bg) !important;
+}
+
+[data-theme="dark"] section.bg-light h2,
+[data-theme="dark"] section.bg-light p,
+[data-theme="dark"] section.bg-light .section-title h2,
+[data-theme="dark"] section.bg-light .section-title p {
+    color: var(--text-color);
+}
+
+
+[data-theme="dark"] .learning-objectives {
+    background: var(--secondary-bg) !important;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .learning-objectives h5,
+[data-theme="dark"] .learning-objectives ul li {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .instructor-card {
+    background: var(--secondary-bg) !important;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .instructor-card h2,
+[data-theme="dark"] .instructor-card h4,
+[data-theme="dark"] .instructor-card p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .curriculum-section {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .curriculum-content {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .curriculum-content h2,
+[data-theme="dark"] .curriculum-content h4,
+[data-theme="dark"] .curriculum-content p,
+[data-theme="dark"] .curriculum-content ul li {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .project-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .project-card h5,
+[data-theme="dark"] .project-card p {
+    color: var(--text-color);
+}
+
+
+[data-theme="dark"] .article-title {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="dark"] .meta-info {
+    color: var(--text-color) !important;
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .article-card {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .article-content h2,
+[data-theme="dark"] .article-content h3,
+[data-theme="dark"] .article-content h4,
+[data-theme="dark"] .article-content p,
+[data-theme="dark"] .article-content ul li,
+[data-theme="dark"] .article-content ol li {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .conclusion-section {
+    background: var(--secondary-bg) !important;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .conclusion-section h3,
+[data-theme="dark"] .conclusion-section p {
+    color: var(--text-color) !important;
+}
+
+
+[data-theme="dark"] main h1,
+[data-theme="dark"] main h2,
+[data-theme="dark"] main h3,
+[data-theme="dark"] main h4,
+[data-theme="dark"] main h5,
+[data-theme="dark"] main h6,
+[data-theme="dark"] main p,
+[data-theme="dark"] main li,
+[data-theme="dark"] main span:not(.badge):not(.btn) {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] section[style*="background-color: #f8f9fa"] {
+    background-color: var(--secondary-bg) !important;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: var(--secondary-bg) !important;
+}
+
+
+[data-theme="dark"] .card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .card .card-body,
+[data-theme="dark"] .card .card-header,
+[data-theme="dark"] .card .card-footer {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+/* Dark mode for conclusion section in blog-detail */
+[data-theme="dark"] div[style*="background: linear-gradient(135deg, #f8fafc, #e2e8f0)"] {
+    background: linear-gradient(135deg, var(--secondary-bg), var(--card-bg)) !important;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] div[style*="background: linear-gradient(135deg, #f8fafc, #e2e8f0)"] h3,
+[data-theme="dark"] div[style*="background: linear-gradient(135deg, #f8fafc, #e2e8f0)"] p {
+    color: var(--text-color) !important;
+}
+
+
+[data-theme="dark"] div[style*="background-color: #f8f9fa"],
+[data-theme="dark"] div[style*="background: #f8f9fa"] {
+    background-color: var(--secondary-bg) !important;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] section[style*="background-color: #f8f9fa"],
+[data-theme="dark"] section[style*="background: #f8f9fa"] {
+    background-color: var(--secondary-bg) !important;
+    color: var(--text-color);
+}
+
+/* Dark mode for all inline background styles */
+[data-theme="dark"] *[style*="background: linear-gradient"] {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] *[style*="background: linear-gradient"] h1,
+[data-theme="dark"] *[style*="background: linear-gradient"] h2,
+[data-theme="dark"] *[style*="background: linear-gradient"] h3,
+[data-theme="dark"] *[style*="background: linear-gradient"] h4,
+[data-theme="dark"] *[style*="background: linear-gradient"] h5,
+[data-theme="dark"] *[style*="background: linear-gradient"] h6,
+[data-theme="dark"] *[style*="background: linear-gradient"] p,
+[data-theme="dark"] *[style*="background: linear-gradient"] li {
+    color: var(--text-color) !important;
+}
+
+
+[data-theme="dark"] .container p,
+[data-theme="dark"] .container h1,
+[data-theme="dark"] .container h2,
+[data-theme="dark"] .container h3,
+[data-theme="dark"] .container h4,
+[data-theme="dark"] .container h5,
+[data-theme="dark"] .container h6,
+[data-theme="dark"] .container li {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] article p,
+[data-theme="dark"] article h1,
+[data-theme="dark"] article h2,
+[data-theme="dark"] article h3,
+[data-theme="dark"] article h4,
+[data-theme="dark"] article h5,
+[data-theme="dark"] article h6,
+[data-theme="dark"] article li {
+    color: var(--text-color) !important;
 }
