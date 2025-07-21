@@ -1,864 +1,952 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevPath - Platform Belajar Coding Masa Depan</title>
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#dashboard">
-                <i class="bi bi-code-slash"></i>
-                DevPath
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tentang">Tentang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#kursus">Kursus</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#harga">Harga</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimoni">Testimoni</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#kontak">Kontak</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Section: Dashboard (Jumbotron) -->
-        <section id="dashboard">
-            <div class="container">
-                <h1 class="display-3 fw-bold">Master the Code, Shape the Future</h1>
-                <p class="lead col-lg-8 mx-auto">
-                    Bergabunglah dengan ribuan developer di DevPath. Tingkatkan skill coding Anda dengan kurikulum berbasis proyek di bidang Web Development, Data Science, dan Mobile Apps.
-                </p>
-                <a href="#kursus" class="btn btn-primary btn-lg mt-3">Lihat Semua Kursus</a>
-            </div>
-        </section>
-
-    <!-- Audio Player Section -->
-<section class="py-5" style="background: linear-gradient(135deg, #e0e7ff 0%, #fff 100%); position: relative;">
-    <!-- Decorative SVG Wave -->
-    <svg viewBox="0 0 1440 100" style="position:absolute;top:0;left:0;width:100%;height:80px;z-index:0;" xmlns="http://www.w3.org/2000/svg"><path fill="#6366f1" fill-opacity="0.15" d="M0,32L80,37.3C160,43,320,53,480,69.3C640,85,800,107,960,101.3C1120,96,1280,64,1360,48L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-    <div class="container position-relative" style="z-index:1;">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card shadow-lg border-0 rounded-4 p-4" style="background: #fff;">
-                    <div class="d-flex align-items-center justify-content-center mb-3">
-                        <i class="bi bi-music-note-beamed fs-1 text-primary me-3"></i>
-                        <h3 class="fw-bold mb-0">DevPath Music Player</h3>
-                    </div>
-                    <p class="lead text-center mb-4 text-secondary">Temani belajar Anda dengan musik! Klik play & rasakan semangat baru 🚀</p>
-                    <audio id="devpath-audio" controls autoplay loop style="width:100%; max-width:600px; height:54px; border-radius:12px; box-shadow:0 2px 12px rgba(99,102,241,0.08);" class="mb-3 mx-auto d-block">
-                        <source src="WebAudio.mp3" type="audio/mpeg">
-                        Browser Anda tidak mendukung audio.
-                    </audio>
-                    <div class="text-center mt-2">
-                        <span class="badge bg-primary fs-6 px-3 py-2">🎧 Musik Belajar DevPath</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <!-- Section: Dipercaya oleh -->
-        <section id="partners">
-            <div class="container text-center">
-                <h6 class="text-muted mb-4">DIPERCAYA OLEH TALENTA DI PERUSAHAAN TEKNOLOGI TERKEMUKA</h6>
-                <div class="row g-5 justify-content-center align-items-center">
-                    <div class="col-4 col-md-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png" class="img-fluid partner-logo" alt="Google">
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="img-fluid partner-logo" alt="Microsoft">
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png" class="img-fluid partner-logo" alt="Amazon">
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Tokopedia.svg" class="img-fluid partner-logo" alt="Tokopedia">
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Gojek_logo_2022.svg" class="img-fluid partner-logo" alt="Gojek">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Tentang Kami -->
-        <section id="tentang">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-md-6">
-                        <!-- GAMBAR DENGAN TOMBOL PLAY -->
-                        <div class="video-thumbnail-container shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded" alt="Tim DevPath sedang berdiskusi">
-                            <button class="play-button" data-bs-toggle="modal" data-bs-target="#videoModal">
-                                <i class="bi bi-play-fill"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <article class="col-md-6">
-                        <div class="section-title text-start">
-                            <h2>Tentang DevPath</h2>
-                            <p class="text-muted">Menjembatani kesenjangan talenta digital di Indonesia.</p>
-                        </div>
-                        <p>Visi kami adalah menciptakan <strong>developer kelas dunia</strong> yang siap bersaing di industri teknologi global. Misi kami adalah menyediakan platform belajar coding yang <em>project-based</em>, interaktif, dan didukung oleh para praktisi ahli.</p>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Kurikulum relevan dengan kebutuhan industri</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Instruktur berpengalaman dari perusahaan ternama</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Portfolio proyek nyata untuk karir Anda</li>
-                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Komunitas developer yang suportif di Discord</li>
-                        </ul>
-                    </article>
-                </div>
-                <br/>
-                <!-- Modal untuk table -->
-                 <h4 id="h4-table">Plus dan Minus Menggunakan Website Kursus Online</h3>
-                 <div class="container mt-5 mb-5" id="plus-minus-table">
-                    <div class="table-responsive">
-                        <table class="table custom-table mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Aspek</th>
-                                    <th scope="col">Kelebihan (Plus)</th>
-                                    <th scope="col">Kekurangan (Minus)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Fleksibilitas</b></td>
-                                    <td>
-                                        <ul>
-                                            <li>Dapat diakses kapan saja dan di mana saja, sesuai jadwal pribadi.</li>
-                                            <li>Belajar dengan kecepatan sendiri (self-paced learning).</li>
-                                            <li>Tidak terikat lokasi geografis, bisa diakses dari seluruh dunia.</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <ul>
-                                            <li>Membutuhkan disiplin diri dan motivasi yang tinggi untuk tetap konsisten.</li>
-                                            <li>Potensi menunda-nunda pelajaran tanpa jadwal yang ketat.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>Biaya</b></td>
-                                    <td>
-                                        <ul>
-                                            <li>Umumnya lebih terjangkau dibandingkan kursus tatap muka tradisional.</li>
-                                            <li>Menghemat biaya transportasi dan akomodasi.</li>
-                                            <li>Tersedia banyak kursus gratis atau dengan model freemium.</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <ul>
-                                            <li>Beberapa kursus premium bisa sangat mahal.</li>
-                                            <li>Ada biaya tambahan untuk sertifikasi atau materi khusus.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>Akses Konten & Materi</b></td>
-                                    <td>
-                                        <ul>
-                                            <li>Akses ke berbagai macam kursus dan topik dari berbagai ahli.</li>
-                                            <li>Materi seringkali diperbarui secara berkala.</li>
-                                            <li>Bisa mengulang materi yang sulit kapan saja.</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <ul>
-                                            <li>Kualitas materi dan instruktur bisa bervariasi antar platform.</li>
-                                            <li>Sulit memverifikasi kredibilitas semua instruktur.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b>Interaksi & Dukungan</b></td>
-                                    <td>
-                                        <ul>
-                                            <li>Forum diskusi dan komunitas online untuk bertanya dan berinteraksi.</li>
-                                            <li>Dukungan teknis dari platform.</li>
-                                            <li>Beberapa kursus menawarkan sesi Q&A langsung.</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <ul>
-                                            <li>Keterbatasan interaksi tatap muka langsung dengan instruktur dan sesama siswa.</li>
-                                            <li>Dukungan personal mungkin tidak seintensif kursus offline.</li>
-                                            <li>Respons dari instruktur atau forum bisa lambat.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BARU: Section Kursus Unggulan -->
-        <section id="kursus">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Kursus Unggulan</h2>
-                    <p class="text-muted">Pilih jalur karir yang paling sesuai dengan passion Anda.</p>
-                </div>
-                <div id="kursusCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#kursusCarousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#kursusCarousel" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#kursusCarousel" data-bs-slide-to="2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Full-Stack Web Development">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Full-Stack Web Development</h5>
-                                            <p class="card-text">Belajar membangun aplikasi web modern dari awal hingga akhir dengan JavaScript, React, Node.js, dan database.</p>
-                                            <a href="syllabus-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Data Science">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Data Science & Machine Learning</h5>
-                                            <p class="card-text">Kuasai Python, analisis data, visualisasi, dan bangun model machine learning untuk memecahkan masalah nyata.</p>
-                                            <a href="syllabus-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Mobile App Development">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Mobile App Development</h5>
-                                            <p class="card-text">Bangun aplikasi iOS dan Android sekaligus dengan satu basis kode menggunakan React Native.</p>
-                                            <a href="syllabus-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Cloud Computing">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Cloud Computing & DevOps</h5>
-                                            <p class="card-text">Pelajari AWS, Azure, Docker, dan Kubernetes untuk deployment aplikasi modern.</p>
-                                            <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/5775854/pexels-photo-5775854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Cybersecurity">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Cybersecurity Specialist</h5>
-                                            <p class="card-text">Kuasai teknik keamanan aplikasi, penetration testing, dan ethical hacking.</p>
-                                            <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="UI/UX Design">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">UI/UX Design</h5>
-                                            <p class="card-text">Design thinking, wireframing, dan prototyping dengan Figma dan Adobe XD.</p>
-                                            <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Blockchain">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Blockchain Development</h5>
-                                            <p class="card-text">Smart contracts, DApps, dan Web3 development dengan Ethereum dan Solidity.</p>
-                                            <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Game Development">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Game Development</h5>
-                                            <p class="card-text">Buat game dengan Unity dan Unreal Engine. Pelajari game design dan monetization.</p>
-                                            <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="AR/VR Development">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">AR/VR Development</h5>
-                                            <p class="card-text">Bangun aplikasi AR/VR dengan Unity dan ARCore/ARKit untuk pengalaman immersive.</p>
-                                            <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#kursusCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#kursusCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Harga -->
-        <section id="harga">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Investasi Karir Anda</h2>
-                    <p class="text-muted">Pilih paket yang paling sesuai dengan tujuan belajar Anda.</p>
-                </div>
-                <div class="row justify-content-center g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 text-center">
-                            <div class="card-header"><h4 class="my-0 fw-normal">Starter</h4></div>
-                            <div class="card-body d-flex flex-column">
-                                <h1 class="card-title pricing-card-title">Rp 250k<small class="text-muted fw-light">/bln</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Akses ke 20+ kursus dasar</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Akses forum komunitas</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Sertifikat penyelesaian</li>
-                                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Sesi mentoring 1-on-1</li>
-                                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Code review</li>
-                                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Jaminan kerja</li>
-                                </ul>
-                                <button type="button" class="w-100 btn btn-lg btn-outline-primary mt-auto">Pilih Paket</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 text-center border-primary shadow-lg">
-                             <div class="card-header bg-primary text-white"><h4 class="my-0 fw-normal">Pro Bootcamp</h4></div>
-                            <div class="card-body d-flex flex-column">
-                                <h1 class="card-title pricing-card-title">Rp 1,5jt<small class="text-muted fw-light">/bln</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Akses ke semua kursus & bootcamp</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Sesi mentoring 1-on-1</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Code review & portfolio building</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Jaminan kerja*</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Career coaching</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Project-based learning</li>
-                                </ul>
-                                <button type="button" class="w-100 btn btn-lg btn-primary mt-auto">Pilih Paket</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 text-center">
-                            <div class="card-header"><h4 class="my-0 fw-normal">Teams</h4></div>
-                            <div class="card-body d-flex flex-column">
-                                <h1 class="card-title pricing-card-title">Hubungi<small class="text-muted fw-light"> kami</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Paket untuk tim & perusahaan</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Dasbor monitoring progres</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Kurikulum yang disesuaikan</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Dukungan khusus 24/7</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Private training sessions</li>
-                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Custom reporting</li>
-                                </ul>
-                                <button type="button" class="w-100 btn btn-lg btn-outline-primary mt-auto">Kontak Sales</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Testimoni -->
-        <section id="testimoni">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Kisah Sukses Alumni</h2>
-                    <p class="text-muted">Apa kata mereka yang telah berkarir setelah belajar di DevPath.</p>
-                </div>
-                <div class="row justify-content-center g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <p class="card-text fst-italic">"Kurikulumnya sangat relevan. Proyek akhir saya menjadi portfolio utama yang membuat saya diterima sebagai Full-Stack Developer."</p>
-                                <div class="d-flex align-items-center mt-4">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="user" class="rounded-circle me-3" width="48" height="48">
-                                    <div>
-                                        <strong class="d-block">Andi Pratama</strong>
-                                        <span class="text-muted small">Full-Stack Developer di Gojek</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <p class="card-text fst-italic">"Dari nol di bidang data, sekarang saya bisa membuat model machine learning sendiri. Mentornya sangat membantu!"</p>
-                                <div class="d-flex align-items-center mt-4">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="user" class="rounded-circle me-3" width="48" height="48">
-                                    <div>
-                                        <strong class="d-block">Siti Rahmawati</strong>
-                                        <span class="text-muted small">Data Scientist di Tokopedia</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <p class="card-text fst-italic">"Komunitas Discord-nya sangat aktif. Saya tidak pernah merasa belajar sendirian. Sangat direkomendasikan untuk pemula."</p>
-                                <div class="d-flex align-items-center mt-4">
-                                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="user" class="rounded-circle me-3" width="48" height="48">
-                                    <div>
-                                        <strong class="d-block">Budi Santoso</strong>
-                                        <span class="text-muted small">Software Engineer di Microsoft</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Blog & Artikel -->
-        <section id="blog">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Blog & Artikel Developer</h2>
-                    <p class="text-muted">Baca artikel terbaru seputar dunia pemrograman dan teknologi.</p>
-                </div>
-                <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#blogCarousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#blogCarousel" data-bs-slide-to="1"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="React vs Vue">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">React vs Vue vs Svelte: Mana yang Terbaik di 2025?</h5>
-                                            <p class="card-text">Perbandingan mendalam framework JavaScript front-end terpopuler untuk proyek Anda selanjutnya.</p>
-                                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Go Language">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Mengapa Go (Golang) Menjadi Bahasa Pilihan untuk Backend?</h5>
-                                            <p class="card-text">Jelajahi keunggulan konkurensi, performa, dan kesederhanaan yang ditawarkan oleh Go.</p>
-                                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Portfolio">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">5 Proyek Wajib untuk Portfolio Junior Developer</h5>
-                                            <p class="card-text">Bingung mau buat proyek apa? Inilah 5 ide proyek yang akan membuat portfolio Anda menonjol.</p>
-                                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="AI in Development">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">AI dalam Development: GitHub Copilot & Tools AI</h5>
-                                            <p class="card-text">Bagaimana AI mengubah cara kita coding dan meningkatkan produktivitas developer.</p>
-                                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/7988086/pexels-photo-7988086.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Cloud Native">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Cloud Native Development di 2025</h5>
-                                            <p class="card-text">Best practices untuk membangun aplikasi modern dengan arsitektur cloud native.</p>
-                                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card h-100">
-                                        <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Remote Work">
-                                        <div class="card-body d-flex flex-column">
-                                            <h5 class="card-title">Tips Sukses Remote Work sebagai Developer</h5>
-                                            <p class="card-text">Panduan lengkap bekerja remote: tools, komunikasi, dan work-life balance.</p>
-                                            <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="articles.html" class="btn btn-primary btn-lg">Lihat Semua Artikel</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Event & Webinar -->
-        <section id="event-webinar" class="py-5 bg-light">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Event & Webinar Terbaru</h2>
-                    <p class="text-muted">Ikuti event dan webinar gratis untuk mengembangkan skill dan networking Anda.</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 border-primary border-2 shadow-sm bg-white">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="badge bg-primary me-2"><i class="bi bi-camera-video-fill me-1"></i>Webinar</span>
-                                    <i class="bi bi-calendar-event fs-5 text-primary"></i>
-                                </div>
-                                <h5 class="card-title mb-2">Roadmap Menjadi Front-End Developer</h5>
-                                <ul class="list-unstyled small mb-3">
-                                    <li><i class="bi bi-clock me-1 text-primary"></i> 25 Juli 2025, 19.00 WIB</li>
-                                    <li><i class="bi bi-person-circle me-1 text-primary"></i> Rina Sari (Senior Front-End Engineer)</li>
-                                </ul>
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded">Daftar Sekarang</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 border-warning border-2 shadow-sm bg-white">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="badge bg-warning text-dark me-2"><i class="bi bi-easel2-fill me-1"></i>Workshop</span>
-                                    <i class="bi bi-bar-chart-steps fs-5 text-warning"></i>
-                                </div>
-                                <h5 class="card-title mb-2">Data Science untuk Pemula</h5>
-                                <ul class="list-unstyled small mb-3">
-                                    <li><i class="bi bi-clock me-1 text-warning"></i> 2 Agustus 2025, 10.00 WIB</li>
-                                    <li><i class="bi bi-person-circle me-1 text-warning"></i> Dimas Prakoso (Data Scientist)</li>
-                                </ul>
-                                <a href="#" class="btn btn-outline-warning btn-sm w-100 text-dark rounded">Daftar Sekarang</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 border-info border-2 shadow-sm bg-white">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="badge bg-info text-dark me-2"><i class="bi bi-people-fill me-1"></i>Meetup</span>
-                                    <i class="bi bi-cup-hot fs-5 text-info"></i>
-                                </div>
-                                <h5 class="card-title mb-2">Ngopi Bareng Developer</h5>
-                                <ul class="list-unstyled small mb-3">
-                                    <li><i class="bi bi-calendar3 me-1 text-info"></i> 10 Agustus 2025</li>
-                                    <li><i class="bi bi-geo-alt me-1 text-info"></i> Jakarta Selatan</li>
-                                    <li><i class="bi bi-people me-1 text-info"></i> Networking & sharing session</li>
-                                </ul>
-                                <a href="#" class="btn btn-outline-info btn-sm w-100 text-dark rounded">Info Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Tips Karir -->
-        <section id="tips-karir" class="py-5">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Tips Karir Developer</h2>
-                    <p class="text-muted">Dapatkan insight dan strategi untuk sukses membangun karir di dunia teknologi.</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Cara Efektif Belajar Coding Otodidak</h5>
-                                <ul class="small mb-0">
-                                    <li>Fokus pada proyek nyata, bukan hanya teori.</li>
-                                    <li>Manfaatkan komunitas online untuk diskusi & feedback.</li>
-                                    <li>Jangan takut gagal, terus eksperimen!</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Tips Lolos Interview Developer</h5>
-                                <ul class="small mb-0">
-                                    <li>Latihan coding test di platform seperti LeetCode/HackerRank.</li>
-                                    <li>Siapkan portfolio proyek yang relevan.</li>
-                                    <li>Pelajari soft skill: komunikasi & teamwork.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Bangun Personal Branding di LinkedIn</h5>
-                                <ul class="small mb-0">
-                                    <li>Update profil & headline sesuai posisi impian.</li>
-                                    <li>Bagikan insight, artikel, atau proyek yang Anda kerjakan.</li>
-                                    <li>Aktif berinteraksi di komunitas profesional.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="articles.html" class="btn btn-primary btn-lg">Lihat Tips Lainnya</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: FAQ -->
-        <section id="faq">
-            <div class="container">
-                <div class="section-title">
-                    <h2>FAQ (Tanya Jawab)</h2>
-                    <p class="text-muted">Pertanyaan yang sering diajukan oleh calon siswa kami.</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq1">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                        Saya pemula, apakah kursus ini cocok untuk saya?
-                                    </button>
-                                </h2>
-                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Tentu saja! Sebagian besar kursus kami dirancang untuk pemula tanpa latar belakang IT. Kami akan membimbing Anda dari konsep paling dasar hingga siap membangun proyek sendiri.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq2">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                        Apakah saya akan dibantu membuat portfolio?
-                                    </button>
-                                </h2>
-                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Ya. Di paket Pro Bootcamp, Anda akan mengerjakan beberapa proyek nyata yang akan kami review. Proyek-proyek ini akan menjadi portfolio solid Anda untuk melamar pekerjaan.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq3">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                        Bahasa pemrograman apa yang harus saya pelajari pertama kali?
-                                    </button>
-                                </h2>
-                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Kami merekomendasikan JavaScript untuk pemula karena sangat serbaguna (bisa untuk front-end dan back-end) dan memiliki permintaan tinggi di industri. Namun, pilihan terbaik tergantung pada tujuan karir Anda.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Kontak -->
-        <section id="kontak">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Hubungi Kami</h2>
-                    <p class="text-muted">Punya pertanyaan lebih lanjut? Tim kami siap membantu.</p>
-                </div>
-                <div class="row justify-content-center align-items-stretch g-4">
-                    <!-- Form Kontak -->
-                    <div class="col-lg-7">
-                        <div class="card h-100">
-                            <div class="card-body p-4 p-md-5">
-                                <form id="contactForm" novalidate>
-                                    <div id="form-success-message" class="alert alert-success d-none" role="alert"></div>
-                                    <div class="mb-3">
-                                        <label for="nama" class="form-label">Nama Lengkap</label>
-                                        <input type="text" class="form-control" id="nama" required>
-                                        <div class="invalid-feedback">Nama lengkap wajib diisi.</div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Alamat Email</label>
-                                        <input type="email" class="form-control" id="email" required>
-                                        <div class="invalid-feedback">Mohon masukkan alamat email yang valid.</div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="pesan" class="form-label">Pesan Anda</label>
-                                        <textarea class="form-control" id="pesan" rows="4" required></textarea>
-                                        <div class="invalid-feedback">Pesan tidak boleh kosong.</div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary w-100 btn-lg">Kirim Pesan</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Info Kontak & Peta -->
-                    <div class="col-lg-5">
-                        <div class="card h-100 bg-light border-0 shadow-sm">
-                            <div class="card-body p-4">
-                                <h5 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Info Kontak</h5>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2"><i class="bi bi-envelope me-2"></i><strong>Email:</strong> info@devpath.id</li>
-                                    <li class="mb-2"><i class="bi bi-telephone me-2"></i><strong>Telepon:</strong> +62 812-3456-7890</li>
-                                    <li class="mb-2"><i class="bi bi-geo-alt me-2"></i><strong>Alamat:</strong> Jakarta, Indonesia</li>
-                                </ul>
-                                <h6 class="fw-bold mb-2">Jam Operasional</h6>
-                                <p class="mb-4 small">Senin - Jumat: 09.00 - 18.00 WIB<br>Sabtu, Minggu & Libur Nasional: Tutup</p>
-                                <h6 class="fw-bold mb-2">Lokasi Kami</h6>
-                                <div class="ratio ratio-16x9 rounded overflow-hidden">
-                                    <iframe src="https://www.google.com/maps?q=Jakarta,Indonesia&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi DevPath"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- BARU: Modal untuk Video -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="videoModalLabel">Kisah DevPath</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-0">
-                    <!-- Rasio 16:9 untuk video responsif -->
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/bJzb-RuUcMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer Baru -->
-    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-code-slash me-2"></i>DevPath</h5>
-                    <p class="small">Platform belajar coding masa depan. Tingkatkan skill, bangun portfolio, dan raih karir impian Anda bersama komunitas developer Indonesia.</p>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0 text-center">
-                    <h6 class="fw-bold mb-3">Ikuti Kami</h6>
-                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-youtube"></i></a>
-                    <a href="#" class="text-white fs-5"><i class="bi bi-discord"></i></a>
-                    <div class="mt-3">
-                        <span class="small">Bergabung di komunitas Discord kami!</span>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center text-md-end">
-                    <h6 class="fw-bold mb-3">Kontak</h6>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><i class="bi bi-envelope me-2"></i>info@devpath.id</li>
-                        <li class="mb-2"><i class="bi bi-telephone me-2"></i>+62 812-3456-7890</li>
-                        <li><i class="bi bi-geo-alt me-2"></i>Jakarta, Indonesia</li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="border-secondary my-4">
-            <div class="row">
-                <div class="col text-center">
-                    <p class="mb-0 small">&copy; 2025 DevPath. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <!-- Custom JS -->
-    <script src="script.js"></script>
-    <script>
-        // Set audio volume to 30% when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            var audio = document.getElementById('devpath-audio');
-            if (audio) {
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <!-- Theme Toggle JS -->
+          <script src="theme-toggle.js"></script>
+          <!-- Custom JS -->
+          <script src="script.js"></script>
+          <script>
+            // Set audio volume to 30% when page loads
+            document.addEventListener('DOMContentLoaded', function() {
+              var audio = document.getElementById('devpath-audio');
+              if (audio) {
                 audio.volume = 0.3;
-            }
-        });
-    </script>
+              }
+            });
+          </script>
+  </body>
+</html>
+<i class="bi bi-code-slash"></i> DevPath </a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#tentang">Tentang</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#kursus">Kursus</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#harga">Harga</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#testimoni">Testimoni</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#kontak">Kontak</a>
+    </li>
+    <li class="nav-item">
+      <button id="themeToggle" class="btn btn-outline-secondary btn-sm ms-2" title="Toggle Dark Mode">
+        <i id="themeIcon" class="bi bi-sun-fill"></i>
+      </button>
+    </li>
+  </ul>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main>
+  <!-- Section: Dashboard (Jumbotron) -->
+  <section id="dashboard">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Master the Code, Shape the Future</h1>
+      <p class="lead col-lg-8 mx-auto"> Bergabunglah dengan ribuan developer di DevPath. Tingkatkan skill coding Anda dengan kurikulum berbasis proyek di bidang Web Development, Data Science, dan Mobile Apps. </p>
+      <a href="#kursus" class="btn btn-primary btn-lg mt-3">Lihat Semua Kursus</a>
+    </div>
+  </section>
+  <!-- Audio Player Section -->
+  <section class="py-5" style="background: linear-gradient(135deg, #e0e7ff 0%, #fff 100%); position: relative;">
+    <!-- Decorative SVG Wave -->
+    <svg viewBox="0 0 1440 100" style="position:absolute;top:0;left:0;width:100%;height:80px;z-index:0;" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#6366f1" fill-opacity="0.15" d="M0,32L80,37.3C160,43,320,53,480,69.3C640,85,800,107,960,101.3C1120,96,1280,64,1360,48L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+    <div class="container position-relative" style="z-index:1;">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0 rounded-4 p-4" style="background: #fff;">
+            <div class="d-flex align-items-center justify-content-center mb-3">
+              <i class="bi bi-music-note-beamed fs-1 text-primary me-3"></i>
+              <h3 class="fw-bold mb-0">DevPath Music Player</h3>
+            </div>
+            <p class="lead text-center mb-4 text-secondary">Temani belajar Anda dengan musik! Klik play & rasakan semangat baru 🚀</p>
+            <audio id="devpath-audio" controls autoplay loop style="width:100%; max-width:600px; height:54px; border-radius:12px; box-shadow:0 2px 12px rgba(99,102,241,0.08);" class="mb-3 mx-auto d-block">
+              <source src="WebAudio.mp3" type="audio/mpeg"> Browser Anda tidak mendukung audio.
+            </audio>
+            <div class="text-center mt-2">
+              <span class="badge bg-primary fs-6 px-3 py-2">🎧 Musik Belajar DevPath</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Dipercaya oleh -->
+  <section id="partners">
+    <div class="container text-center">
+      <h6 class="text-muted mb-4">DIPERCAYA OLEH TALENTA DI PERUSAHAAN TEKNOLOGI TERKEMUKA</h6>
+      <div class="row g-5 justify-content-center align-items-center">
+        <div class="col-4 col-md-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png" class="img-fluid partner-logo" alt="Google">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="img-fluid partner-logo" alt="Microsoft">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png" class="img-fluid partner-logo" alt="Amazon">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Tokopedia.svg" class="img-fluid partner-logo" alt="Tokopedia">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Gojek_logo_2022.svg" class="img-fluid partner-logo" alt="Gojek">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Tentang Kami -->
+  <section id="tentang">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6">
+          <!-- GAMBAR DENGAN TOMBOL PLAY -->
+          <div class="video-thumbnail-container shadow-lg">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded" alt="Tim DevPath sedang berdiskusi">
+            <button class="play-button" data-bs-toggle="modal" data-bs-target="#videoModal">
+              <i class="bi bi-play-fill"></i>
+            </button>
+          </div>
+        </div>
+        <article class="col-md-6">
+          <div class="section-title text-start">
+            <h2>Tentang DevPath</h2>
+            <p class="text-muted">Menjembatani kesenjangan talenta digital di Indonesia.</p>
+          </div>
+          <p>Visi kami adalah menciptakan <strong>developer kelas dunia</strong> yang siap bersaing di industri teknologi global. Misi kami adalah menyediakan platform belajar coding yang <em>project-based</em>, interaktif, dan didukung oleh para praktisi ahli. </p>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-primary me-2"></i>Kurikulum relevan dengan kebutuhan industri
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-primary me-2"></i>Instruktur berpengalaman dari perusahaan ternama
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-primary me-2"></i>Portfolio proyek nyata untuk karir Anda
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill text-primary me-2"></i>Komunitas developer yang suportif di Discord
+            </li>
+          </ul>
+        </article>
+      </div>
+      <br />
+      <!-- Modal untuk table -->
+      <h4 id="h4-table">Plus dan Minus Menggunakan Website Kursus Online </h3>
+        <div class="container mt-5 mb-5" id="plus-minus-table">
+          <div class="table-responsive">
+            <table class="table custom-table mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Aspek</th>
+                  <th scope="col">Kelebihan (Plus)</th>
+                  <th scope="col">Kekurangan (Minus)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <b>Fleksibilitas</b>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Dapat diakses kapan saja dan di mana saja, sesuai jadwal pribadi.</li>
+                      <li>Belajar dengan kecepatan sendiri (self-paced learning).</li>
+                      <li>Tidak terikat lokasi geografis, bisa diakses dari seluruh dunia.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Membutuhkan disiplin diri dan motivasi yang tinggi untuk tetap konsisten.</li>
+                      <li>Potensi menunda-nunda pelajaran tanpa jadwal yang ketat.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Biaya</b>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Umumnya lebih terjangkau dibandingkan kursus tatap muka tradisional.</li>
+                      <li>Menghemat biaya transportasi dan akomodasi.</li>
+                      <li>Tersedia banyak kursus gratis atau dengan model freemium.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Beberapa kursus premium bisa sangat mahal.</li>
+                      <li>Ada biaya tambahan untuk sertifikasi atau materi khusus.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Akses Konten & Materi</b>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Akses ke berbagai macam kursus dan topik dari berbagai ahli.</li>
+                      <li>Materi seringkali diperbarui secara berkala.</li>
+                      <li>Bisa mengulang materi yang sulit kapan saja.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Kualitas materi dan instruktur bisa bervariasi antar platform.</li>
+                      <li>Sulit memverifikasi kredibilitas semua instruktur.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Interaksi & Dukungan</b>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Forum diskusi dan komunitas online untuk bertanya dan berinteraksi.</li>
+                      <li>Dukungan teknis dari platform.</li>
+                      <li>Beberapa kursus menawarkan sesi Q&A langsung.</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Keterbatasan interaksi tatap muka langsung dengan instruktur dan sesama siswa.</li>
+                      <li>Dukungan personal mungkin tidak seintensif kursus offline.</li>
+                      <li>Respons dari instruktur atau forum bisa lambat.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- BARU: Section Kursus Unggulan -->
+  <section id="kursus">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kursus Unggulan</h2>
+        <p class="text-muted">Pilih jalur karir yang paling sesuai dengan passion Anda.</p>
+      </div>
+      <div id="kursusCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#kursusCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#kursusCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#kursusCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Full-Stack Web Development">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Full-Stack Web Development</h5>
+                    <p class="card-text">Belajar membangun aplikasi web modern dari awal hingga akhir dengan JavaScript, React, Node.js, dan database.</p>
+                    <a href="syllabus-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Data Science">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Data Science & Machine Learning</h5>
+                    <p class="card-text">Kuasai Python, analisis data, visualisasi, dan bangun model machine learning untuk memecahkan masalah nyata.</p>
+                    <a href="syllabus-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Mobile App Development">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Mobile App Development</h5>
+                    <p class="card-text">Bangun aplikasi iOS dan Android sekaligus dengan satu basis kode menggunakan React Native.</p>
+                    <a href="syllabus-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Cloud Computing">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Cloud Computing & DevOps</h5>
+                    <p class="card-text">Pelajari AWS, Azure, Docker, dan Kubernetes untuk deployment aplikasi modern.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/5775854/pexels-photo-5775854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Cybersecurity">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Cybersecurity Specialist</h5>
+                    <p class="card-text">Kuasai teknik keamanan aplikasi, penetration testing, dan ethical hacking.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="UI/UX Design">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">UI/UX Design</h5>
+                    <p class="card-text">Design thinking, wireframing, dan prototyping dengan Figma dan Adobe XD.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Blockchain">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Blockchain Development</h5>
+                    <p class="card-text">Smart contracts, DApps, dan Web3 development dengan Ethereum dan Solidity.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Game Development">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Game Development</h5>
+                    <p class="card-text">Buat game dengan Unity dan Unreal Engine. Pelajari game design dan monetization.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="AR/VR Development">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">AR/VR Development</h5>
+                    <p class="card-text">Bangun aplikasi AR/VR dengan Unity dan ARCore/ARKit untuk pengalaman immersive.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Silabus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#kursusCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#kursusCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Harga -->
+  <section id="harga">
+    <div class="container">
+      <div class="section-title">
+        <h2>Investasi Karir Anda</h2>
+        <p class="text-muted">Pilih paket yang paling sesuai dengan tujuan belajar Anda.</p>
+      </div>
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 text-center">
+            <div class="card-header">
+              <h4 class="my-0 fw-normal">Starter</h4>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h1 class="card-title pricing-card-title">Rp 250k <small class="text-muted fw-light">/bln</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Akses ke 20+ kursus dasar
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Akses forum komunitas
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Sertifikat penyelesaian
+                </li>
+                <li>
+                  <i class="bi bi-x-circle-fill text-danger me-2"></i>Sesi mentoring 1-on-1
+                </li>
+                <li>
+                  <i class="bi bi-x-circle-fill text-danger me-2"></i>Code review
+                </li>
+                <li>
+                  <i class="bi bi-x-circle-fill text-danger me-2"></i>Jaminan kerja
+                </li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary mt-auto">Pilih Paket</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 text-center border-primary shadow-lg">
+            <div class="card-header bg-primary text-white">
+              <h4 class="my-0 fw-normal">Pro Bootcamp</h4>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h1 class="card-title pricing-card-title">Rp 1,5jt <small class="text-muted fw-light">/bln</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Akses ke semua kursus & bootcamp
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Sesi mentoring 1-on-1
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Code review & portfolio building
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Jaminan kerja*
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Career coaching
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Project-based learning
+                </li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary mt-auto">Pilih Paket</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 text-center">
+            <div class="card-header">
+              <h4 class="my-0 fw-normal">Teams</h4>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h1 class="card-title pricing-card-title">Hubungi <small class="text-muted fw-light"> kami</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Paket untuk tim & perusahaan
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Dasbor monitoring progres
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Kurikulum yang disesuaikan
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Dukungan khusus 24/7
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Private training sessions
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Custom reporting
+                </li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary mt-auto">Kontak Sales</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Testimoni -->
+  <section id="testimoni">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kisah Sukses Alumni</h2>
+        <p class="text-muted">Apa kata mereka yang telah berkarir setelah belajar di DevPath.</p>
+      </div>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <p class="card-text fst-italic">"Kurikulumnya sangat relevan. Proyek akhir saya menjadi portfolio utama yang membuat saya diterima sebagai Full-Stack Developer."</p>
+              <div class="d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="user" class="rounded-circle me-3" width="48" height="48">
+                <div>
+                  <strong class="d-block">Andi Pratama</strong>
+                  <span class="text-muted small">Full-Stack Developer di Gojek</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <p class="card-text fst-italic">"Dari nol di bidang data, sekarang saya bisa membuat model machine learning sendiri. Mentornya sangat membantu!"</p>
+              <div class="d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="user" class="rounded-circle me-3" width="48" height="48">
+                <div>
+                  <strong class="d-block">Siti Rahmawati</strong>
+                  <span class="text-muted small">Data Scientist di Tokopedia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <p class="card-text fst-italic">"Komunitas Discord-nya sangat aktif. Saya tidak pernah merasa belajar sendirian. Sangat direkomendasikan untuk pemula."</p>
+              <div class="d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="user" class="rounded-circle me-3" width="48" height="48">
+                <div>
+                  <strong class="d-block">Budi Santoso</strong>
+                  <span class="text-muted small">Software Engineer di Microsoft</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Blog & Artikel -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-title">
+        <h2>Blog & Artikel Developer</h2>
+        <p class="text-muted">Baca artikel terbaru seputar dunia pemrograman dan teknologi.</p>
+      </div>
+      <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#blogCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#blogCarousel" data-bs-slide-to="1"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="React vs Vue">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">React vs Vue vs Svelte: Mana yang Terbaik di 2025?</h5>
+                    <p class="card-text">Perbandingan mendalam framework JavaScript front-end terpopuler untuk proyek Anda selanjutnya.</p>
+                    <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Go Language">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Mengapa Go (Golang) Menjadi Bahasa Pilihan untuk Backend?</h5>
+                    <p class="card-text">Jelajahi keunggulan konkurensi, performa, dan kesederhanaan yang ditawarkan oleh Go.</p>
+                    <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Portfolio">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">5 Proyek Wajib untuk Portfolio Junior Developer</h5>
+                    <p class="card-text">Bingung mau buat proyek apa? Inilah 5 ide proyek yang akan membuat portfolio Anda menonjol.</p>
+                    <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="AI in Development">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">AI dalam Development: GitHub Copilot & Tools AI</h5>
+                    <p class="card-text">Bagaimana AI mengubah cara kita coding dan meningkatkan produktivitas developer.</p>
+                    <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/7988086/pexels-photo-7988086.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Cloud Native">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Cloud Native Development di 2025</h5>
+                    <p class="card-text">Best practices untuk membangun aplikasi modern dengan arsitektur cloud native.</p>
+                    <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Remote Work">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Tips Sukses Remote Work sebagai Developer</h5>
+                    <p class="card-text">Panduan lengkap bekerja remote: tools, komunikasi, dan work-life balance.</p>
+                    <a href="blog-detail.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="text-center mt-4">
+        <a href="articles.html" class="btn btn-primary btn-lg">Lihat Semua Artikel</a>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Event & Webinar -->
+  <section id="event-webinar" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Event & Webinar Terbaru</h2>
+        <p class="text-muted">Ikuti event dan webinar gratis untuk mengembangkan skill dan networking Anda.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-primary border-2 shadow-sm bg-white">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="badge bg-primary me-2">
+                  <i class="bi bi-camera-video-fill me-1"></i>Webinar </span>
+                <i class="bi bi-calendar-event fs-5 text-primary"></i>
+              </div>
+              <h5 class="card-title mb-2">Roadmap Menjadi Front-End Developer</h5>
+              <ul class="list-unstyled small mb-3">
+                <li>
+                  <i class="bi bi-clock me-1 text-primary"></i> 25 Juli 2025, 19.00 WIB
+                </li>
+                <li>
+                  <i class="bi bi-person-circle me-1 text-primary"></i> Rina Sari (Senior Front-End Engineer)
+                </li>
+              </ul>
+              <a href="#" class="btn btn-outline-primary btn-sm w-100 rounded">Daftar Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-warning border-2 shadow-sm bg-white">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="badge bg-warning text-dark me-2">
+                  <i class="bi bi-easel2-fill me-1"></i>Workshop </span>
+                <i class="bi bi-bar-chart-steps fs-5 text-warning"></i>
+              </div>
+              <h5 class="card-title mb-2">Data Science untuk Pemula</h5>
+              <ul class="list-unstyled small mb-3">
+                <li>
+                  <i class="bi bi-clock me-1 text-warning"></i> 2 Agustus 2025, 10.00 WIB
+                </li>
+                <li>
+                  <i class="bi bi-person-circle me-1 text-warning"></i> Dimas Prakoso (Data Scientist)
+                </li>
+              </ul>
+              <a href="#" class="btn btn-outline-warning btn-sm w-100 text-dark rounded">Daftar Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-info border-2 shadow-sm bg-white">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="badge bg-info text-dark me-2">
+                  <i class="bi bi-people-fill me-1"></i>Meetup </span>
+                <i class="bi bi-cup-hot fs-5 text-info"></i>
+              </div>
+              <h5 class="card-title mb-2">Ngopi Bareng Developer</h5>
+              <ul class="list-unstyled small mb-3">
+                <li>
+                  <i class="bi bi-calendar3 me-1 text-info"></i> 10 Agustus 2025
+                </li>
+                <li>
+                  <i class="bi bi-geo-alt me-1 text-info"></i> Jakarta Selatan
+                </li>
+                <li>
+                  <i class="bi bi-people me-1 text-info"></i> Networking & sharing session
+                </li>
+              </ul>
+              <a href="#" class="btn btn-outline-info btn-sm w-100 text-dark rounded">Info Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Tips Karir -->
+  <section id="tips-karir" class="py-5">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tips Karir Developer</h2>
+        <p class="text-muted">Dapatkan insight dan strategi untuk sukses membangun karir di dunia teknologi.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Cara Efektif Belajar Coding Otodidak</h5>
+              <ul class="small mb-0">
+                <li>Fokus pada proyek nyata, bukan hanya teori.</li>
+                <li>Manfaatkan komunitas online untuk diskusi & feedback.</li>
+                <li>Jangan takut gagal, terus eksperimen!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Tips Lolos Interview Developer</h5>
+              <ul class="small mb-0">
+                <li>Latihan coding test di platform seperti LeetCode/HackerRank.</li>
+                <li>Siapkan portfolio proyek yang relevan.</li>
+                <li>Pelajari soft skill: komunikasi & teamwork.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Bangun Personal Branding di LinkedIn</h5>
+              <ul class="small mb-0">
+                <li>Update profil & headline sesuai posisi impian.</li>
+                <li>Bagikan insight, artikel, atau proyek yang Anda kerjakan.</li>
+                <li>Aktif berinteraksi di komunitas profesional.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="articles.html" class="btn btn-primary btn-lg">Lihat Tips Lainnya</a>
+      </div>
+    </div>
+  </section>
+  <!-- Section: FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>FAQ (Tanya Jawab)</h2>
+        <p class="text-muted">Pertanyaan yang sering diajukan oleh calon siswa kami.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1"> Saya pemula, apakah kursus ini cocok untuk saya? </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body"> Tentu saja! Sebagian besar kursus kami dirancang untuk pemula tanpa latar belakang IT. Kami akan membimbing Anda dari konsep paling dasar hingga siap membangun proyek sendiri. </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2"> Apakah saya akan dibantu membuat portfolio? </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body"> Ya. Di paket Pro Bootcamp, Anda akan mengerjakan beberapa proyek nyata yang akan kami review. Proyek-proyek ini akan menjadi portfolio solid Anda untuk melamar pekerjaan. </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3"> Bahasa pemrograman apa yang harus saya pelajari pertama kali? </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body"> Kami merekomendasikan JavaScript untuk pemula karena sangat serbaguna (bisa untuk front-end dan back-end) dan memiliki permintaan tinggi di industri. Namun, pilihan terbaik tergantung pada tujuan karir Anda. </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Kontak -->
+  <section id="kontak">
+    <div class="container">
+      <div class="section-title">
+        <h2>Hubungi Kami</h2>
+        <p class="text-muted">Punya pertanyaan lebih lanjut? Tim kami siap membantu.</p>
+      </div>
+      <div class="row justify-content-center align-items-stretch g-4">
+        <!-- Form Kontak -->
+        <div class="col-lg-7">
+          <div class="card h-100">
+            <div class="card-body p-4 p-md-5">
+              <form id="contactForm" novalidate>
+                <div id="form-success-message" class="alert alert-success d-none" role="alert"></div>
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="nama" required>
+                  <div class="invalid-feedback">Nama lengkap wajib diisi.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Alamat Email</label>
+                  <input type="email" class="form-control" id="email" required>
+                  <div class="invalid-feedback">Mohon masukkan alamat email yang valid.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="pesan" class="form-label">Pesan Anda</label>
+                  <textarea class="form-control" id="pesan" rows="4" required></textarea>
+                  <div class="invalid-feedback">Pesan tidak boleh kosong.</div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 btn-lg">Kirim Pesan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Info Kontak & Peta -->
+        <div class="col-lg-5">
+          <div class="card h-100 bg-light border-0 shadow-sm">
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-3">
+                <i class="bi bi-info-circle me-2"></i>Info Kontak
+              </h5>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2">
+                  <i class="bi bi-envelope me-2"></i>
+                  <strong>Email:</strong> info@devpath.id
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-telephone me-2"></i>
+                  <strong>Telepon:</strong> +62 812-3456-7890
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-geo-alt me-2"></i>
+                  <strong>Alamat:</strong> Jakarta, Indonesia
+                </li>
+              </ul>
+              <h6 class="fw-bold mb-2">Jam Operasional</h6>
+              <p class="mb-4 small">Senin - Jumat: 09.00 - 18.00 WIB <br>Sabtu, Minggu & Libur Nasional: Tutup </p>
+              <h6 class="fw-bold mb-2">Lokasi Kami</h6>
+              <div class="ratio ratio-16x9 rounded overflow-hidden">
+                <iframe src="https://www.google.com/maps?q=Jakarta,Indonesia&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi DevPath"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- BARU: Modal untuk Video -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="videoModalLabel">Kisah DevPath</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/bJzb-RuUcMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer Baru -->
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+        <h5 class="fw-bold mb-3">
+          <i class="bi bi-code-slash me-2"></i>DevPath
+        </h5>
+        <p class="small">Platform belajar coding masa depan. Tingkatkan skill, bangun portfolio, dan raih karir impian Anda bersama komunitas developer Indonesia.</p>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0 text-center">
+        <h6 class="fw-bold mb-3">Ikuti Kami</h6>
+        <a href="#" class="text-white me-3 fs-5">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="text-white me-3 fs-5">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="text-white me-3 fs-5">
+          <i class="bi bi-youtube"></i>
+        </a>
+        <a href="#" class="text-white fs-5">
+          <i class="bi bi-discord"></i>
+        </a>
+        <div class="mt-3">
+          <span class="small">Bergabung di komunitas Discord kami!</span>
+        </div>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <h6 class="fw-bold mb-3">Kontak</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2">
+            <i class="bi bi-envelope me-2"></i>info@devpath.id
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-telephone me-2"></i>+62 812-3456-7890
+          </li>
+          <li>
+            <i class="bi bi-geo-alt me-2"></i>Jakarta, Indonesia
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="row">
+      <div class="col text-center">
+        <p class="mb-0 small">&copy; 2025 DevPath. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('devpath-audio');
+    if (audio) {
+      audio.volume = 0.3;
+    }
+  });
+</script>
 </body>
 </html>
