@@ -164,45 +164,6 @@
       <button id="toggleTableBtn" class="btn btn-sm btn-warning mb-2">
   Sembunyikan Tabel
 </button>
-
-<!-- Tambahan CSS -->
-<style>
-  .hidden-table {
-    display: none;
-    transition: all 0.3s ease-in-out;
-  }
-
-  #toggleTableBtn {
-    background-color: #ffc107;
-    border: none;
-    color: #000;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-bottom: 12px;
-    transition: background-color 0.2s ease;
-  }
-
-  #toggleTableBtn:hover {
-    background-color: #e0a800;
-  }
-</style>
-
-<!-- Script Toggle -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("toggleTableBtn");
-    const tableContainer = document.getElementById("plus-minus-table");
-
-    toggleBtn.addEventListener("click", function () {
-      tableContainer.classList.toggle("hidden-table");
-      toggleBtn.textContent = tableContainer.classList.contains("hidden-table")
-        ? "Tampilkan Tabel"
-        : "Sembunyikan Tabel";
-    });
-  });
-</script>
         <div class="container mt-5 mb-5" id="plus-minus-table">
           <div class="table-responsive">
             <table class="table custom-table mb-0">
@@ -293,6 +254,46 @@
         </div>
     </div>
   </section>
+  <!-- Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("toggleTableBtn");
+    const tableContainer = document.getElementById("plus-minus-table");
+
+    if (toggleBtn && tableContainer) {
+      toggleBtn.addEventListener("click", function () {
+        tableContainer.classList.toggle("hidden-table");
+        toggleBtn.textContent = tableContainer.classList.contains("hidden-table")
+          ? "Tampilkan Tabel"
+          : "Sembunyikan Tabel";
+      });
+    }
+  });
+</script>
+
+<!-- CSS -->
+<style>
+  .hidden-table {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #toggleTableBtn {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background-color 0.2s ease;
+  }
+
+  #toggleTableBtn:hover {
+    background-color: #e0a800;
+  }
+</style>
   <!-- BARU: Section Kursus Unggulan -->
   <section id="kursus">
     <div class="container">
