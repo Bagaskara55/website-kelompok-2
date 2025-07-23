@@ -160,7 +160,24 @@
       </div>
       <br />
       <!-- Modal untuk table -->
-      <h4 id="h4-table">Keunggulan dan Kekurangan Menggunakan Website Kursus Online </h3>
+      <h4 id="h4-table">Keunggulan dan Kekurangan Menggunakan Website Kursus Online </h4>
+      <button id="toggleTableBtn" class="btn btn-sm btn-warning mb-2">
+  Tampilkan/Sembunyikan Tabel
+</button>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("toggleTableBtn");
+    const tableContainer = document.getElementById("plus-minus-table");
+
+    toggleBtn.addEventListener("click", function () {
+      if (tableContainer.style.display === "none") {
+        tableContainer.style.display = "block";
+      } else {
+        tableContainer.style.display = "none";
+      }
+    });
+  });
+</script>
         <div class="container mt-5 mb-5" id="plus-minus-table">
           <div class="table-responsive">
             <table class="table custom-table mb-0">
