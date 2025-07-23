@@ -1056,3 +1056,8 @@ section:nth-of-type(even) {
 [data-theme="dark"] article li {
     color: var(--text-color) !important;
 }
+/* === Custom Styles for Tabel Toggle === */
+.hidden-table {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
